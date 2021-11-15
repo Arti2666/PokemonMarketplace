@@ -1,0 +1,6 @@
+<h1>MARKET PLACE (index pokemon)</h1>
+<%= link_to "create", new_pokemon_path %>
+
+<% @pokemons.each do |pokemon| %>
+  <%= pokemon.name %>
+<% end %>
