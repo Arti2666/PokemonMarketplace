@@ -40,6 +40,7 @@ class PokemonsController < ApplicationController
 
   def destroy
     @pokemon = Pokemon.find(params[:id])
+    authorize @pokemon
     if @pokemon.destroy
       redirect_to pokemons_path
     end
