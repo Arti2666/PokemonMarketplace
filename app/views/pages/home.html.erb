@@ -1,6 +1,41 @@
-<h1>Pages#home</h1>
+<div class="navbar">
+  <div class="left-element">
+      <div class="logo">
+        <%= image_tag("pokeball.png") %>
+        <h1>Pokéshop</h1>
+      </div>
+      <div class="element">
+        <p>Explore</p>
+      </div>
+      <div class="element">
+        <p>How it works</p>
+      </div>
+  </div>
+  <div class="right-element">
+    <div class="element-search">
+      <input type="text" placeholder="">
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="element">
+      <%= link_to "login", new_user_session_path %>
+    </div>
+  </div>
+</div>
 
-<%= link_to "login", new_user_session_path %>
+<div class="header-container">
+    <div class="text-information">
+      <h1>Gotta catch them all !</h1>
+      <p>The first peer to peer online Pokemon shop.
+        The most needed Pokemon Marketplace!</p>
+    </div>
+    <div class="img-information">
+      <img src="" alt="">
+    </div>
+    <div class="btn-information">
+      <%= link_to "market place", pokemons_path %>
+    </div>
+  </div>
+</div>
+
 <%= link_to "sign up", new_user_registration_path %>
 <%= link_to "sign out", destroy_user_session_path,  method: :delete%>
-<%= link_to "market place", pokemons_path %>
