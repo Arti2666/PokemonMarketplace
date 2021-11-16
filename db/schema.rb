@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_130745) do
     t.string "image"
     t.string "type2", default: ""
     t.integer "price"
+    t.boolean "reserved", default: false
     t.index ["user_id"], name: "index_pokemons_on_user_id"
   end
 

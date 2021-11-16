@@ -2,5 +2,8 @@
 <%= link_to "create", new_pokemon_path %>
 
 <% @pokemons.each do |pokemon| %>
-  <%= link_to pokemon.name, pokemon_path(pokemon)  %>
+  <% if pokemon.reserved == false %>
+    <%= link_to pokemon.name, pokemon_path(pokemon)  %>
+    <%= pokemon.price %>
+  <% end %>
 <% end %>
