@@ -4,20 +4,18 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
-  def create
-    @booking = Booking.new(booking_params)
+  def create # rubocop:disable all
+    @booking = Booking.new
     @booking.user = current_user
-    @booking.pokemon = Pokemon.find(params[:pokemon_id])
+    @pokemon = Pokemon.find(params[:pokemon_id])
+    @booking.pokemon = @pokemon
+    @booking.price = @pokemon.price
     if @booking.save
+      @pokemon.reserved = true
+      @pokemon.save
       redirect_to pokemons_path
     else
       render :new
     end
-  end
-
-  private
-
-  def booking_params
-    params.require(:booking).permit(:price)
   end
 end
