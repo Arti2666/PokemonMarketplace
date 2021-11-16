@@ -17,7 +17,7 @@
       <i class="fas fa-search"></i>
     </div>
     <div class="element">
-      <%= link_to "login", new_user_session_path %>
+      <%= link_to "LOGIN", new_user_session_path %>
     </div>
   </div>
 </div>
@@ -27,12 +27,12 @@
       <h1>Gotta catch them all !</h1>
       <p>The first peer to peer online Pokemon shop.
         The most needed Pokemon Marketplace!</p>
+      <div class="header-btn">
+        <%= link_to "LOGIN", pokemons_path %>
+      </div>
     </div>
-    <div class="img-information">
+    <div class="img-information" style="background-image: url('<%= image_path('landing_page_visual.png') %>')">
       <img src="" alt="">
-    </div>
-    <div class="btn-information">
-      <%= link_to "market place", pokemons_path %>
     </div>
   </div>
 </div>

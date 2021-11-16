@@ -12,6 +12,8 @@ body {
   height: 15vh;
   width: 100%;
   color: white;
+  z-index: 1;
+  background: linear-gradient(#21344B ,transparent);
 }
 
 // NAVBAR LOGO
@@ -25,6 +27,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   margin: 0;
+  margin-right: 15px;
 }
 
 .left-element {
@@ -96,20 +99,62 @@ body {
   width: 116px;
 }
 
+// BACKGROUND IMAGE
+.img-information {
+  width: 60vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // SECTION INFO
 .header-container {
+  position: absolute;
+  top: 0;
   width: 100%;
-  margin: 190px;
+  height: 100vh;
+  display: flex;
+  // margin: 190px;
 }
+
 .text-information {
   color: white;
   font-weight: bold;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  width: 812px;
+  padding-left: 183px;
+  padding-right: 75px;
+
 }
 
 .text-information h1 {
   font-family: 'Roboto';
+  font-weight: lighter;
 }
 
 .text-information p {
   font-weight: lighter;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #638395;
+  height: 42px;
+  width: 116px;
+}
+
+.header-btn a{
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: medium;
+
 }
