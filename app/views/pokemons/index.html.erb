@@ -2,5 +2,5 @@
 <%= link_to "create", new_pokemon_path %>
 
 <% @pokemons.each do |pokemon| %>
-  <%= pokemon.name %>
+  <%= link_to pokemon.name, pokemon_path(pokemon)  %>
 <% end %>

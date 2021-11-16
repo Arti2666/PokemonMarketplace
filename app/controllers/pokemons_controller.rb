@@ -7,6 +7,7 @@ class PokemonsController < ApplicationController
 
   def show
     @pokemon = Pokemon.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -31,6 +32,13 @@ class PokemonsController < ApplicationController
     @pokemon = Pokemon.find(params[:id])
     @pokemon.update(poke_params)
     redirect_to pokemon_path(@pokemon)
+  end
+
+  def destroy
+    @pokemon = Pokemon.find(params[:id])
+    if @pokemon.destroy
+      redirect_to pokemons_path
+    end
   end
 
   private

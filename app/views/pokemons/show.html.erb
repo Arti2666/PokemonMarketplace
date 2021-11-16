@@ -1,0 +1,9 @@
+<h1>show</h1>
+<%= @pokemon.name %>
+
+<%= simple_form_for([@pokemon, @booking]) do |f| %>
+    <%= f.input :price %>
+    <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Delete", pokemon_path , method: :delete %>
