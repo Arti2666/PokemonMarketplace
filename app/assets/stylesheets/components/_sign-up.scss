@@ -1,0 +1,95 @@
+// CONTAINER DE LA PAGE
+
+.sign-up-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100vh;
+  width: 100%;
+}
+
+// SIGNUP CARD
+
+.sign-up-container {
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: #21344B;
+}
+
+// LOGO
+.sign-up-page .logo {
+  margin-top: 20px;
+}
+
+.sign-up-page img {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+}
+
+.sign-up-page .logo h1 {
+  font-size: xx-large;
+}
+
+.sign-up-page h2 {
+  text-align: center;
+  font-size: medium;
+  font-size: larger;
+  margin-top: 5px;
+}
+
+
+// SIGNUP FORM
+.sign-up-container input {
+  background-color: #21344B;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+}
+
+.new_user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.form-font-color input {
+  color: white;
+}
+
+.form-actions .btn {
+  color: #5A708C;
+  border-radius: 8px;
+  border: 2px solid;
+  transition: 0.2s ease-in-out;
+  margin-top: 20px;
+
+}
+
+.form-actions .btn:hover {
+  color: white;
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+.login-part {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+
+  p {
+    margin: 0px;
+    font-size: small;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0px;
+    margin-left: 5px;
+    font-size: small;
+  }
+}
