@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @pokemon = Pokemon.find(params[:pokemon_id])
     @booking.pokemon = @pokemon
     @booking.price = @pokemon.price
+    authorize @booking
     if @booking.save
       @pokemon.reserved = true
       @pokemon.save
