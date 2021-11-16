@@ -1,1 +1,115 @@
 // Specific CSS for your home-page
+body {
+  height: 100vh;
+  background: linear-gradient(111.34deg, #21344B 0%, #648395 100%);
+  font-family: 'Roboto';
+}
+
+// NAVBAR
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  height: 15vh;
+  width: 100%;
+  color: white;
+}
+
+// NAVBAR LOGO
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.left-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-weight: lighter;
+}
+
+.left-element p {
+  margin: 0;
+}
+
+.left-element img {
+  margin: auto;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+.element {
+  margin: 20px;
+}
+
+// NAVBAR - BARRE DE RECHERCHE
+.element-search {
+  margin: 20px;
+  position: relative;
+  color: white;
+  font-size: medium;
+}
+
+.element-search input {
+  color: white;
+  font-size: medium;
+  padding-left: 45px;
+}
+
+.element-search i {
+  position: absolute;
+  left: 10px;
+  bottom: 7px;
+}
+
+
+.right-element {
+  display: flex;
+  align-items: center;
+}
+
+.right-element input {
+  border: none;
+  background-color: #638395;
+  height: 30px;
+  width: 280px;
+  border-radius: 20px;
+}
+
+.right-element a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #638395;
+  height: 42px;
+  width: 116px;
+}
+
+// SECTION INFO
+.header-container {
+  width: 100%;
+  margin: 190px;
+}
+.text-information {
+  color: white;
+  font-weight: bold;
+}
+
+.text-information h1 {
+  font-family: 'Roboto';
+}
+
+.text-information p {
+  font-weight: lighter;
+}
