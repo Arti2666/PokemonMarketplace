@@ -8,6 +8,7 @@ class PokemonsController < ApplicationController
   def show
     @pokemon = Pokemon.find(params[:id])
     @booking = Booking.new
+    @seller = User.find(@pokemon.user_id)
     authorize @pokemon
   end
 
