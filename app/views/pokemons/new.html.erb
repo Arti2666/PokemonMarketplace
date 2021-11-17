@@ -2,7 +2,7 @@
 <%= simple_form_for @pokemon do |f| %>
   <%= f.input :name, collection: Pokemon::POKEDEX %>
   <%= f.input :price, placeholder: 'price in €' %>
-  <%= f.submit class: 'btn btn-flat' %>
+  <%= f.submit class: 'header-btn' %>
 <% end %>
 
 <%= link_to "back to market place", pokemons_path %>
