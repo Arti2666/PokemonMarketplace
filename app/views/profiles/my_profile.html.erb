@@ -1,0 +1,19 @@
+<h1>Profile</h1>
+<h2><%= current_user.email %></h2>
+
+<h2>Mes locations</h2>
+
+<% current_user.pokemon_rented.each do |pokemon| %>
+  <%= pokemon.name %> => <%= @users.find(pokemon.user_id).email %>
+  <br>
+<% end %>
+
+<br>
+
+<h2>Mes pokemons a louer</h2>
+
+<% @pokemons.each do |pokemon| %>
+  <%= pokemon.name %>
+  <%= pokemon.reserved ? "LOUER" : "DISPONIBLE" %>
+  <br>
+<% end %>

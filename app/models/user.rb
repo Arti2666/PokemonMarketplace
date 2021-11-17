@@ -6,4 +6,14 @@ class User < ApplicationRecord
 
   has_many :pokemons
   has_many :bookings
+
+  has_many :pokemon_rented, through: :bookings, source: :pokemon
 end
+
+# all your pokemons
+# def pokemons
+# end
+
+# all the pokemons you've booked
+# def pokemon_rented
+# end
