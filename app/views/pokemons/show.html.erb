@@ -3,7 +3,7 @@
 <%= @pokemon.name %>
 <%= @pokemon.price %>
 <%= simple_form_for([@pokemon, @booking]) do |f| %>
-    <%= f.button :submit %>
+    <%= f.button :submit , class: "header-btn"%>
 <% end %>
 
 <% if current_user.id == @pokemon.user_id %>
