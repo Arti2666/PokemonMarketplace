@@ -14,6 +14,6 @@
 
 <% @pokemons.each do |pokemon| %>
   <%= pokemon.name %>
-  <%= pokemon.reserved ? "LOUER" : "DISPONIBLE" %>
+  <%= pokemon.reserved ? "RENTED" : "AVAILABLE" %>
   <br>
 <% end %>

@@ -1,6 +1,6 @@
 <h1>NEW POKEMON</h1>
 <%= simple_form_for @pokemon do |f| %>
-  <%= f.input :name, collection: Pokemon::POKEDEX %>
+  <%= f.input :name, collection: Pokemon::POKEDEX%>
   <%= f.input :price, placeholder: 'price in €' %>
   <%= f.submit class: 'btn btn-flat' %>
 <% end %>
