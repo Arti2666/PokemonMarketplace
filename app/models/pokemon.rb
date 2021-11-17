@@ -4,7 +4,7 @@ class Pokemon < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
 
-    dex = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise",
+    POKEDEX = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise",
       "Caterpie", "Metapod", "Butterfree", "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata",
       "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", "Pikachu", "Raichu", "Sandshrew", "Sanslash",
       "Nidoran-female", "Nidorina", "Nidoquen", "Nidoran-male", "Nidorino", "Nidoking", "Clefairy", "Clefable", "Vulpix",
@@ -19,6 +19,6 @@ class Pokemon < ApplicationRecord
       "Seaking", "Staryu", "Starmie", "Mr.Mime", "Scyther", "Jynx", "Electabuzz", "Magmar", "Pinsir", "Tauros",
       "Magikarp", "Gyarados", "Lapras", "Ditto", "Eevee", "Vaporeon", "Jolteon", "Flareon", "Porygon",
       "Omanyte", "Omastar", "Kabuto", "Kabutops", "Aerodactyl", "Snorlax", "Articuno", "Zapdos", "Moltres",
-      "Dratini", "Dragonair", "Dragonite", "Mewtwo", "Mew"]
-    PokeList = dex.sort
+      "Dratini", "Dragonair", "Dragonite", "Mewtwo", "Mew"].sort
+
 end
