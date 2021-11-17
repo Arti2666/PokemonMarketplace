@@ -10,16 +10,16 @@ Pokemon.destroy_all
 
 # Decomment to launch user creation
 
-# user1 = { username: "Ash", email: "Ash@Kanto.com", password: "123456" }
-# user2 = { username: "Brock", email: "Brock@Kanto.com", password: "123456" }
-# user3 = { username: "Misty", email: "Misty@Kanto.com", password: "123456" }
-# user4 = { username: "Red", email: "Red@Kanto.com", password: "123456" }
+user1 = { username: "Ash", email: "Ash@Kanto.com", password: "123456" }
+user2 = { username: "Brock", email: "Brock@Kanto.com", password: "123456" }
+user3 = { username: "Misty", email: "Misty@Kanto.com", password: "123456" }
+user4 = { username: "Red", email: "Red@Kanto.com", password: "123456" }
 
-# [user1, user2, user3, user4].each do |attributes|
-#   user = User.create!(attributes)
-#   puts "Created #{user.username}"
-# end
-# puts "Finished Users!"
+[user1, user2, user3, user4].each do |attributes|
+user = User.create!(attributes)
+puts "Created #{user.username}"
+end
+puts "Finished Users!"
 
 puts "Creating pokemons..."
 bulbasaur = { name: "Bulbasaur", type1: "Grass", type2: "Poison", user_id: 1, price: 5, image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" }
