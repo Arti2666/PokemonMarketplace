@@ -2,7 +2,6 @@
 <%= @seller.email %>
 <%= @pokemon.name %>
 <%= @pokemon.price %>
-
 <%= simple_form_for([@pokemon, @booking]) do |f| %>
     <%= f.button :submit %>
 <% end %>
