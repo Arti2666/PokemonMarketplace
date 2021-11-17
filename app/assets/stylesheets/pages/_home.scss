@@ -7,6 +7,8 @@ body {
 
 // NAVBAR
 .navbar {
+  position: sticky;
+  top: 0px;
   display: flex;
   justify-content: space-evenly;
   height: 15vh;
@@ -136,8 +138,8 @@ body {
   width: 812px;
   padding-left: 183px;
   padding-right: 75px;
-
 }
+
 
 .text-information h1 {
   font-family: 'Roboto';

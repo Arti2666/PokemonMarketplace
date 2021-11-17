@@ -1,0 +1,35 @@
+<div class="navbar">
+  <div class="left-element">
+      <div class="logo">
+        <%= link_to image_tag("pokeball.png"), root_path %>
+        <h1>Pokéshop</h1>
+      </div>
+      <div class="element">
+        <p>Explore</p>
+      </div>
+      <div class="element">
+        <p>How it works</p>
+      </div>
+  </div>
+  <div class="right-element">
+    <div class="element-search">
+      <input type="text" placeholder="">
+      <i class="fas fa-search"></i>
+    </div>
+    <% if user_signed_in? %>
+      <div class="sign-up-btn">
+        <%= link_to "Sign Out", destroy_user_session_path,  method: :delete%>
+      </div>
+        <div class="sign-up-btn">
+          <%= link_to "My Profile", my_profile_profiles_path %>
+      </div>
+    <% else %>
+      <div class="sign-up-btn">
+        <%= link_to "Sign-Up", new_user_session_path %>
+      </div>
+      <div class="element">
+        <%= link_to "LOGIN", new_user_session_path %>
+      </div>
+    <% end %>
+  </div>
+</div>

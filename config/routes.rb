@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   resources :pokemons do
     resources :bookings, only: %I[new create]
   end
+  resources :profiles, only: %I[show] do
+    collection do         # on cree une route sans id
+      get :my_profile
+    end
+  end
 end

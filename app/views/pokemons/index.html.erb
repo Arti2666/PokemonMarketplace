@@ -1,9 +1,43 @@
-<h1>MARKET PLACE (index pokemon)</h1>
-<%= link_to "create", new_pokemon_path %>
 
-<% @pokemons.each do |pokemon| %>
-  <% if pokemon.reserved == false %>
-    <%= link_to pokemon.name, pokemon_path(pokemon)  %>
-    <%= pokemon.price %>
-  <% end %>
-<% end %>
+
+  <h1 class="title-market">MARKET PLACE</h1>
+
+  <div class="container-main">
+    <div class="list-cards">
+      <% @pokemons.each do |pokemon| %>
+        <% if pokemon.reserved == false %>
+          <div class="card-container">
+            <div class="card">
+                <%= link_to "", pokemon_path(pokemon), class:"exemple" %>
+              <div class="img-container">
+                <div class="card-img">
+                  <img src="<%= pokemon.image%>" alt="">
+                </div>
+              </div>
+              <div class="poke-info">
+                <div class="poke-name">
+                  <%= link_to pokemon.name, pokemon_path(pokemon)  %>
+                </div>
+                <div class="div-price">
+                  <div class="price-title">
+                    <%= pokemon.price %><p>€</p>
+                  </div>
+                  <div class="poke-buy">
+                    <%= link_to "RENT", pokemon_path(pokemon)  %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="sticky-version">
+    <div class="add-poke">
+      <p>Add a pokemon</p>
+      <%= link_to "+", new_pokemon_path %>
+    </div>
+  </div>
+</div>
