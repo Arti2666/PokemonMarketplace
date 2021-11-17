@@ -16,12 +16,18 @@
       <input type="text" placeholder="">
       <i class="fas fa-search"></i>
     </div>
-    <div class="sign-up-btn">
-      <%= link_to "sign-up", new_user_session_path %>
-    </div>
-    <div class="element">
-      <%= link_to "LOGIN", new_user_session_path %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="sign-up-btn">
+        <%= link_to "sign out", destroy_user_session_path,  method: :delete%>
+      </div>
+    <% else %>
+      <div class="sign-up-btn">
+        <%= link_to "sign-up", new_user_session_path %>
+      </div>
+      <div class="element">
+        <%= link_to "LOGIN", new_user_session_path %>
+      </div>
+    <% end %>
   </div>
 </div>
 
