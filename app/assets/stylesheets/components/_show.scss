@@ -1,0 +1,260 @@
+
+//CARD CONTAINER
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background-color: #1a1d28;
+  border-radius: 19px;
+  opacity: 76%;
+  // border: 1px solid greenyellow;
+}
+
+//IMAGE CONTAINER
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  // border: 1px solid red;
+}
+
+.pokemon-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #648395;
+  width: 370px;
+  height: 475px;
+  justify-content: center;
+  border-radius: 19px;
+}
+
+.pokemon-img img {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 400px;
+}
+
+//POKEMON INFORMATION
+.information-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+}
+
+.information-container a {
+  color: white;
+}
+
+.pokemon-information{
+  // border: 1px solid blue;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+//POKEMON NAME DIV
+.pokemon-name{
+  // border: 1px solid purple;
+  width: 400px;
+  height: 50px;
+}
+
+  .pokemon-name h2{
+    font-family: 'Roboto';
+    font-size: 48px;
+    color: white;
+  }
+
+//POKEMON RENTER DIV
+.pokemon-renter{
+  // border: 1px solid purple;
+  width: 400px;
+  height: 30px;
+}
+
+  .pokemon-renter h4 {
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+  }
+
+//POKEMON DESCRIPTION DIV
+.pokemon-description {
+  // border: 1px solid purple;
+  width: 400px;
+  height: 80px;
+}
+
+  .pokemon-description p {
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 18px;
+      color: white;
+    }
+
+//POKEMON TYPE DIV
+.pokemon-type{
+  // border: 1px solid purple;
+  width: 400px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+  .pokemon-type .type{
+    // border: 1px solid pink;
+    width: 380px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start ;
+  }
+
+    .text{
+      // border: 1px solid lightskyblue;
+      width: 150px;
+      height: 30px;
+    }
+
+    .text h4{
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 18px;
+      color: white;
+    }
+
+    .type-tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(45deg, #2a34be ,#0e1dca);
+    height: 25px;
+    width: 130px;
+    margin-left: 15px;
+  }
+
+  .type-tag h4 {
+    margin: 0;
+  }
+
+  .weakness-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(45deg, #e4dc48 ,#898709);
+    height: 25px;
+    width: 130px;
+    margin-left: 15px;
+  }
+
+  .weakness-tag h4 {
+    margin: 0;
+  }
+
+    .type-tag h4{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+      margin: 0;
+    }
+
+//POKEMON PRICE DIV
+.pokemon-price{
+  // border: 1px solid purple;
+  background-color: #08090c5b;
+  border-radius: 19px;
+  width: 450px;
+  height: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+  .current-price{
+    // border: 1px solid lightskyblue;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+    .label{
+    // border: 1px solid lightgreen;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+      h4 {
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 18px;
+      color: white;
+      }
+
+    .price {
+      // border: 1px solid lightgreen;
+      width: 150px;
+      height: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+       h2 {
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 30px;
+        color: white;
+        }
+
+// RENT BUTTON DIV
+.rent-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(45deg, #B558B1 ,#7681f8);
+  height: 42px;
+  width: 230px;
+}
+
+  .rent-button p {
+    color: #f9fafb;
+    font-weight: 300;
+    font-size: medium;
+    margin: 0;
+  }
+
+  .rent-button input {
+    color: white;
+  }

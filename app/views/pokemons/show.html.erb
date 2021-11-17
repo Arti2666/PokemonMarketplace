@@ -1,12 +1,59 @@
-<h1>show</h1>
-<%= @seller.email %>
-<%= @pokemon.name %>
-<%= @pokemon.price %>
-<%= simple_form_for([@pokemon, @booking]) do |f| %>
-    <%= f.button :submit , class: "header-btn"%>
-<% end %>
+<div class="container">
+  <div class="card-container">
+    <div class="img-container">
+      <div class="pokemon-img">
+        <img src="<%= @pokemon.image %>">
+      </div>
+    </div>
+    <div class="information-container">
+      <div class="pokemon-information">
+        <div class="pokemon-name">
+          <h2><%= @pokemon.name %></h2>
+        </div>
+        <div class="pokemon-renter">
+          <h4><u>Rented by:</u> Arti</h4>
+        </div>
+        <div class="pokemon-description">
+          <p>It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.</p>
+        </div>
+        <div class="pokemon-type">
+          <div class="type">
+            <div class="text">
+              <h4>Type:</h4>
+            </div>
+            <div class="type-tag">
+              <h4>Water</h4>
+            </div>
+          </div>
+          <div class="type">
+            <div class="text">
+              <h4>Weaknesses:</h4>
+            </div>
+            <div class="weakness-tag">
+              <h4>Electricity</h4>
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-price">
+          <div class="current-price">
+            <div class="label">
+              <h4>Current price</h4>
+            </div>
+            <div class="price">
+              <h2>€<%= @pokemon.price %></h2>
+            </div>
+          </div>
+          <div class="rent-button">
+            <%= simple_form_for([@pokemon, @booking]) do |f| %>
+              <%= f.button :submit %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <%= link_to "Delete", pokemon_path, method: :delete%>
+    </div>
+  </div>
+  <%= link_to "back to market place", pokemons_path %>
+</div>
 
-<% if current_user.id == @pokemon.user_id %>
-  <%= link_to "Delete", pokemon_path , method: :delete %>
-<% end %>
-<%= link_to "back to market place", pokemons_path %>
+
