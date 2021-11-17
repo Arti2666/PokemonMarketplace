@@ -2,8 +2,11 @@
 <%= @seller.email %>
 <%= @pokemon.name %>
 <%= @pokemon.price %>
-<%= simple_form_for([@pokemon, @booking]) do |f| %>
+
+<% if current_user.id != @pokemon.user_id %>
+  <%= simple_form_for([@pokemon, @booking]) do |f| %>
     <%= f.button :submit , class: "header-btn"%>
+  <% end %>
 <% end %>
 
 <% if current_user.id == @pokemon.user_id %>
