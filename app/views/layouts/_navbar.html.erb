@@ -20,6 +20,9 @@
       <div class="sign-up-btn">
         <%= link_to "sign out", destroy_user_session_path,  method: :delete%>
       </div>
+        <div class="sign-up-btn">
+          <%= link_to "My Profile", my_profile_profiles_path %>
+      </div>
     <% else %>
       <div class="sign-up-btn">
         <%= link_to "sign-up", new_user_session_path %>
