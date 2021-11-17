@@ -99,6 +99,15 @@ body {
   width: 116px;
 }
 
+.right-element .sign-up-btn a {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+
+
 // BACKGROUND IMAGE
 .img-information {
   width: 60vw;
@@ -133,10 +142,12 @@ body {
 .text-information h1 {
   font-family: 'Roboto';
   font-weight: lighter;
+  margin-bottom: 20px;
 }
 
 .text-information p {
   font-weight: lighter;
+  margin-bottom: 20px;
 }
 
 .header-btn {
@@ -146,15 +157,14 @@ body {
   text-decoration: none;
   border-radius: 5px;
   color: white;
-  background-color: #638395;
+  background: linear-gradient(45deg, #B558B1 ,#7681f8);
   height: 42px;
-  width: 116px;
+  width: 230px;
 }
 
-.header-btn a{
+.header-btn a {
   color: #f9fafb;
   text-decoration: none;
   font-weight: lighter;
   font-size: medium;
-
 }
