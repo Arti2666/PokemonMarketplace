@@ -2,6 +2,7 @@ require "open-uri"
 require "nokogiri"
 
 class PokemonsController < ApplicationController
+  attr_accessor :description
 
   def index
     @pokemons = policy_scope(Pokemon)
@@ -22,8 +23,9 @@ class PokemonsController < ApplicationController
   def create
     @pokemon = Pokemon.new(poke_params)
     authorize @pokemon
-    scrape_pokemon(@pokemon)
+    scrape_pokemon
     @pokemon.user = current_user
+
     if @pokemon.save
       redirect_to pokemons_path
     else
@@ -53,19 +55,20 @@ class PokemonsController < ApplicationController
   private
 
   # Scraper
-  def scrape_pokemon(pokemon)
-    url = "https://www.pokemon.com/us/pokedex/#{pokemon.name}"
+  def scrape_pokemon
+    url = "https://www.pokemon.com/us/pokedex/#{@pokemon.name}"
     doc = Nokogiri::HTML(URI.open(url, "Accept-Language" => "en-US").read)
     image = doc.search('img.active').attribute('src').value
     description = doc.search('p.version-x').first.text.strip
-    pokemon.image = image
-    pokemon.description = description
-    pokemon.type1 = doc.search('.dtm-type ul li').first.text.strip
+    @pokemon.image = image
+    @pokemon.description = description
+    @pokemon.type1 = doc.search('.dtm-type ul li').first.text.strip
     type2li = doc.search('.dtm-type ul li.middle').first
+
     if type2li.nil?
-      pokemon.type2 = ""
+      @pokemon.type2 = ""
     else
-      pokemon.type2 = type2li.text.strip
+      @pokemon.type2 = type2li.text.strip
     end
   end
 
