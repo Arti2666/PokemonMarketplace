@@ -16,6 +16,9 @@
       <input type="text" placeholder="">
       <i class="fas fa-search"></i>
     </div>
+    <div class="sign-up-btn">
+      <%= link_to "sign-up", new_user_session_path %>
+    </div>
     <div class="element">
       <%= link_to "LOGIN", new_user_session_path %>
     </div>
@@ -28,7 +31,7 @@
       <p>The first peer to peer online Pokemon shop.
         The most needed Pokemon Marketplace!</p>
       <div class="header-btn">
-        <%= link_to "LOGIN", pokemons_path %>
+        <%= link_to "GO TO MARKETPLACE", pokemons_path %>
       </div>
     </div>
     <div class="img-information" style="background-image: url('<%= image_path('landing_page_visual.png') %>')">
@@ -37,5 +40,5 @@
   </div>
 </div>
 
-<%= link_to "sign up", new_user_registration_path %>
-<%= link_to "sign out", destroy_user_session_path,  method: :delete%>
+<%# <%= link_to "sign up", new_user_registration_path %>
+<%# <%= link_to "sign out", destroy_user_session_path,  method: :delete%>
