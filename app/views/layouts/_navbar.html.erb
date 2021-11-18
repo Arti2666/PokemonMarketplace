@@ -5,17 +5,20 @@
         <h1>Pokéshop</h1>
       </div>
       <div class="element">
-        <p>Explore</p>
-      </div>
-      <div class="element">
-        <p>How it works</p>
+        <p class="sign-up-btn"><%= link_to 'Marketplace', pokemons_path, class:"Arti-btn-Mkt"%></p>
       </div>
   </div>
   <div class="right-element">
     <div class="element-search">
       <%# couleur du placeholder a set %>
-      <input type="text" placeholder="Search your Team Mate">
-      <i class="fas fa-search"></i>
+      <!-- <input type="text" placeholder="Search your Team Mate"> -->
+      <%= form_tag pokemons_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search a Pokemon"%>
+      <!-- <i class="fas fa-search"></i> -->
+      <% end %>
     </div>
     <% if user_signed_in? %>
       <div class="sign-up-btn">

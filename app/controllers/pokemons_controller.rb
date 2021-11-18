@@ -5,7 +5,11 @@ class PokemonsController < ApplicationController
   attr_accessor :description
 
   def index
+    if params[:query].present?
+    @pokemons = policy_scope(Pokemon.where(name: params[:query]))
+    else
     @pokemons = policy_scope(Pokemon)
+    end
   end
 
   def show
