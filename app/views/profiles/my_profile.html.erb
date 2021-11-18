@@ -1,23 +1,95 @@
-<h1>Profile</h1>
-<div class="header-btn">
-  <%= link_to "GO TO MARKETPLACE", pokemons_path %>
+<div class="tanki-myprofile-container">
+  <div class="tanki-myprofile-information-container">
+    <div class="tanki-myprofile-page-title">
+      <h1>Profile Page</h1>
+    </div>
+    <div class="tanki-myprofile-email-section">
+      <div class="tanki-myprofile-email">
+        <h4>Email:</h4>
+      </div>
+      <div class="tanki-myprofile-current-user-email">
+        <p><%= current_user.email %></p>
+      </div>
+    </div>
+  </div>
+  <div class="tanki-myprofile-tabs-container">
+    <div class="tanki-myprofile-tabs-div">
+      <div class="tanki-myprofile-tabs">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">My Rentals</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">My Pokemons</button>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="container-main">
+            <div class="list-cards">
+              <% current_user.pokemon_rented.each do |pokemon| %>
+                <div class="card-container">
+                  <%= link_to pokemon_path(pokemon) do %>
+                    <div class="card">
+                      <div class="img-container">
+                        <div class="card-img">
+                          <img src="<%= pokemon.image %>" alt="">
+                        </div>
+                      </div>
+                      <div class="poke-info">
+                        <div class="poke-name">
+                          <%= pokemon.name %>
+                        </div>
+                        <div class="div-price">
+                          <div class="price-title">
+                            <%= pokemon.price %><p>€</p>
+                          </div>
+                          <div class="poke-buy">
+                            <p>RENTED</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="container-main">
+            <div class="list-cards">
+              <% @pokemons.each do |pokemon| %>
+                <div class="card-container">
+                  <%= link_to pokemon_path(pokemon) do %>
+                    <div class="card">
+                      <div class="img-container">
+                        <div class="card-img">
+                          <img src="<%= pokemon.image %>" alt="">
+                        </div>
+                      </div>
+                      <div class="poke-info">
+                        <div class="poke-name">
+                          <%= pokemon.name %>
+                        </div>
+                        <div class="div-price">
+                          <div class="price-title">
+                            <%= pokemon.price %><p>€</p>
+                          </div>
+                          <div class="poke-buy">
+                            <p><%=pokemon.reserved ? "RENTED" : "AVAILABLE" %></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<h2><%= current_user.username.present? ? current_user.username : current_user.email %></h2>
-
-<h2>Mes locations</h2>
-
-
-<% current_user.pokemon_rented.each do |pokemon| %>
-  <%= pokemon.name %> => <%= check_pseudo(pokemon, @users) %>
-  <br>
-<% end %>
-
-<br>
-
-<h2>Mes pokemons a louer</h2>
-
-<% @pokemons.each do |pokemon| %>
-  <%= pokemon.name %>
-  <%= pokemon.reserved ? "RENTED" : "AVAILABLE" %>
-  <br>
-<% end %>
