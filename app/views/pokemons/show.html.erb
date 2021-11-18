@@ -53,13 +53,16 @@
             </div>
           </div>
           <div class="rent-button">
-            <%= simple_form_for([@pokemon, @booking]) do |f| %>
-              <%= f.button :submit %>
+            <% if current_user.id == @pokemon.user_id  %>
+              <%= link_to "Delete", pokemon_path, method: :delete%>
+            <% else %>
+              <%= simple_form_for([@pokemon, @booking]) do |f| %>
+                <%= f.button :submit %>
+              <% end %>
             <% end %>
           </div>
         </div>
       </div>
-      <%= link_to "Delete", pokemon_path, method: :delete%>
     </div>
   </div>
   <%= link_to "back to market place", pokemons_path %>
