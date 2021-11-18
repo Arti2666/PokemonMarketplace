@@ -147,7 +147,6 @@
     justify-content: center;
     border-radius: 5px;
     color: white;
-    background: linear-gradient(45deg, #2a34be ,#0e1dca);
     height: 25px;
     width: 130px;
     margin-left: 15px;
@@ -261,4 +260,82 @@
 
   .rent-button input {
     color: white;
+  }
+
+
+  // Types
+
+  .Grass {
+    background-color: #9bcc50;
+  }
+
+  .Fire {
+    background-color: #fd7d24;
+  }
+
+  .Water {
+    background-color: #4592c4;
+  }
+
+  .Ground {
+    background: linear-gradient(
+    180deg, #f7de3f 50%, #ab9842 50%);
+  }
+
+   .Flying {
+    background: linear-gradient(
+    180deg, #3dc7ef 50%, #bdb9b8 50%);
+  }
+
+  .Rock {
+    background-color: #a38c21;
+  }
+
+  .Electric {
+    background-color: #EED535;
+  }
+
+  .Ice {
+    background-color: #4592C3;
+  }
+
+  .Dragon {
+    background: linear-gradient(
+    180deg, #53a4cf 50%, #f16e57 50%);
+  }
+
+  .Bug {
+    background-color: #719F3E;
+  }
+
+  .Psychic {
+    background-color: #F365B9;
+  }
+
+  .Dark {
+    background-color: #707070;
+  }
+
+  .Ghost {
+    background-color: #9bcc50;
+  }
+
+  .Fairy {
+    background-color: #FCB9E8;
+  }
+
+  .Normal {
+    background-color: #A3ABAE;
+  }
+
+  .Steel {
+    background-color: #9DB7B7;
+  }
+
+  .Fighting {
+    background-color: #D56722;
+  }
+
+  .Poison {
+    background-color: #B87EC8;
   }

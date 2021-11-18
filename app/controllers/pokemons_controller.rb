@@ -63,7 +63,7 @@ class PokemonsController < ApplicationController
     @pokemon.image = image
     @pokemon.description = description
     @pokemon.type1 = doc.search('.dtm-type ul li').first.text.strip
-    type2li = doc.search('.dtm-type ul li.middle').first
+    type2li = doc.search('.pokedex-pokemon-attributes.active .dtm-type ul li.middle').first
 
     if type2li.nil?
       @pokemon.type2 = ""
