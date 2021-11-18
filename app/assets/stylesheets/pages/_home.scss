@@ -2,6 +2,7 @@
 body {
   height: 100vh;
   background: linear-gradient(111.34deg, #21344B 0%, #648395 100%);
+  background-attachment: fixed;
   font-family: 'Roboto';
 }
 
@@ -73,6 +74,10 @@ body {
   position: absolute;
   left: 10px;
   bottom: 7px;
+}
+
+.element-search input::placeholder {
+  color: white;
 }
 
 
