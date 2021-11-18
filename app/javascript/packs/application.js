@@ -18,3 +18,7 @@ require("channels")
 
 import "controllers"
 import "bootstrap"
+import { givePrice } from '../components/show';
+document.addEventListener('turbolinks:load', () => {
+  givePrice()
+})
