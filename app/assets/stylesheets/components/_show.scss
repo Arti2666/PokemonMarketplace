@@ -243,7 +243,6 @@
 .rent-button {
   border-radius: 5px;
   color: white;
-  background: linear-gradient(45deg, #B558B1 ,#7681f8);
   height: 42px;
   width: 230px;
 }
@@ -264,6 +263,7 @@
   .alexis-book-btn-show {
     height: 100%;
     width: 100%;
+    background: linear-gradient(45deg, #B558B1 ,#7681f8);
   }
 
   .alexis-book-btn-show form {
@@ -295,6 +295,10 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+  }
+
+  .arti-btn {
+    background: rgb(182, 59, 59);
   }
 
   .alexis-delete-show-btn a:hover {
@@ -361,7 +365,7 @@
   }
 
   .Ice {
-    background-color: #4592C3;
+    background-color: #51C3E7;
   }
 
   .Dragon {
