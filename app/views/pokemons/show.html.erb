@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="card-container">
-    <div class="img-container">
+  <div class="tanki-card-container">
+    <div class="tanki-img-container">
       <div class="pokemon-img">
         <img src="<%= @pokemon.image %>">
       </div>
@@ -11,18 +11,27 @@
           <h2><%= @pokemon.name %></h2>
         </div>
         <div class="pokemon-renter">
-          <h4><u>Rented by:</u> Arti</h4>
+          <h4><u>Rented by:</u> <%= "Arti" %></h4> <!-- Add dynamic unsername -->
         </div>
         <div class="pokemon-description">
-          <p>It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.</p>
+          <p><%= @pokemon.description %></p>
         </div>
         <div class="pokemon-type">
           <div class="type">
             <div class="text">
               <h4>Type:</h4>
             </div>
-            <div class="type-tag">
-              <h4>Water</h4>
+            <div>
+            <div class="arti-tag">
+              <div class="type-tag">
+                <h4><%= @pokemon.type1 %></h4>
+              </div>
+              <% if @pokemon.type2.present?  %>
+                <div class="type-tag">
+                  <h4><%= @pokemon.type2 %></h4>
+                </div>
+              <% end %>
+            </div>
             </div>
           </div>
           <div class="type">
@@ -30,7 +39,7 @@
               <h4>Weaknesses:</h4>
             </div>
             <div class="weakness-tag">
-              <h4>Electricity</h4>
+              <h4><%= @pokemon.type2 %></h4>
             </div>
           </div>
         </div>
@@ -55,5 +64,3 @@
   </div>
   <%= link_to "back to market place", pokemons_path %>
 </div>
-
-
