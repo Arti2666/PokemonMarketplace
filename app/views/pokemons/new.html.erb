@@ -1,8 +1,23 @@
-<h1>NEW POKEMON</h1>
-<%= simple_form_for @pokemon do |f| %>
-  <%= f.input :name, collection: Pokemon::POKEDEX%>
-  <%= f.input :price, placeholder: 'price in €' %>
-  <%= f.submit class: 'header-btn' %>
-<% end %>
 
-<%= link_to "back to market place", pokemons_path %>
+<div class="alexis-addpokemonpage-container">
+    <div class="alexis-addpokemonpage-card-form">
+        <div class="alexis-addpokemonpage-logo">
+          <div class="alexis-addpokemonpage-logo-image">
+            <%= image_tag("pokeball.png") %>
+          </div>
+          <h1>Pokéshop</h1>
+        </div>
+        <h1>NEW POKEMON</h1>
+        <%= simple_form_for @pokemon do |f| %>
+          <div class="alexis-addpokemonpage-inputs">
+            <%= f.input :name, collection: Pokemon::POKEDEX%>
+            <%= f.input :price, placeholder: 'price in €' %>
+            <div class="alexis-addpokemonpage-create-btn">
+              <%= f.submit class: 'header-btn' %>
+            </div>
+            <%= link_to "back to market place", pokemons_path, class:"alexis-addpokemonpage-marketplace-btn" %>
+          </div>
+        <% end %>
+    </div>
+
+</div>

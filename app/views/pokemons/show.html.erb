@@ -54,10 +54,14 @@
           </div>
           <div class="rent-button">
             <% if current_user.id == @pokemon.user_id  %>
-              <%= link_to "Delete", pokemon_path, method: :delete%>
+              <div class="alexis-delete-show-btn">
+                <%= link_to "Delete", pokemon_path, method: :delete, class:"btn btn-alert"%>
+              </div>
             <% else %>
-              <%= simple_form_for([@pokemon, @booking]) do |f| %>
-                <%= f.button :submit %>
+              <div class="alexis-book-btn-show">
+                <%= simple_form_for([@pokemon, @booking]) do |f| %>
+                  <%= f.button :submit %>
+              </div>
               <% end %>
             <% end %>
           </div>
@@ -65,5 +69,7 @@
       </div>
     </div>
   </div>
-  <%= link_to "back to market place", pokemons_path %>
+  <div class="alexis-marketbtn-show">
+    <%= link_to "back to market place", pokemons_path %>
+  </div>
 </div>
