@@ -1,0 +1,108 @@
+.tanki-myprofile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tanki-myprofile-information-container {
+  // border: 1px solid purple;
+  width: 1200px;
+}
+
+//PAGE TITLE
+.tanki-myprofile-page-title {
+  // border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 1100px;
+}
+
+.tanki-myprofile-page-title h1 {
+  font-family: 'Roboto';
+  font-size: 48px;
+  font-weight: normal;
+  color: white;
+}
+
+//EMAIL SECTION
+.tanki-myprofile-email-section {
+  // border: 1px solid pink;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5px;
+  margin-left: 40px;
+  width: 1100px;
+}
+
+.tanki-myprofile-email{
+  // border: 1px solid yellow;
+  text-align: center;
+}
+
+.tanki-myprofile-email-section h4 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: normal;
+  color: white;
+  margin: 0;
+}
+
+.tanki-myprofile-current-user-email {
+  // border: 1px solid yellow;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.tanki-myprofile-current-user-email p {
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+}
+
+
+//TABS CONTAINER
+
+.tanki-myprofile-tabs-container {
+  // border: 1px solid rgb(195, 20, 35);
+  margin-top: 20px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tanki-myprofile-tabs div {
+  // border: 1px solid yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 1100px;
+  margin-left: 40px;
+}
+
+.tanki-myprofile-tabs {
+  // border: 1px solid rgb(34, 243, 243);
+  width: 1100px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+.card-container a {
+  text-decoration: none;
+}
+
+.nav-pills .nav-link.active {
+  background: linear-gradient(45deg, #B558B1 ,#7681f8)
+}
+
+.nav-pills .nav-link {
+  color: white
+}
