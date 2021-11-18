@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.card-container {
+.tanki-card-container {
   display: flex;
   width: 900px;
   height: 500px;
@@ -17,7 +17,7 @@
 }
 
 //IMAGE CONTAINER
-.img-container {
+.tanki-img-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +141,7 @@
       color: white;
     }
 
-    .type-tag{
+    .type-tag {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,6 +151,10 @@
     height: 25px;
     width: 130px;
     margin-left: 15px;
+  }
+
+  .arti-tag {
+    display: flex;
   }
 
   .type-tag h4 {
