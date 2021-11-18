@@ -7,6 +7,26 @@
   flex-direction: column;
 }
 
+.back-to-pokemons {
+  position: absolute;
+  top: -48px;
+  left: -56px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s all ease;
+  &:hover {
+    color: rgb(200, 200, 200);
+  }
+  i {
+    margin-right: 10px;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
 .tanki-card-container {
   position: relative;
   display: flex;
@@ -14,6 +34,7 @@
   height: 500px;
   background-color: #1a1d289c;
   border-radius: 19px;
+  margin-top: 45px;
   // border: 1px solid greenyellow;
 }
 
@@ -111,6 +132,7 @@
   // border: 1px solid purple;
   width: 400px;
   height: 80px;
+  margin-bottom: 10px;
 }
 
   .pokemon-description p {
@@ -123,11 +145,13 @@
 //POKEMON TYPE DIV
 .pokemon-type{
   // border: 1px solid purple;
-  width: 400px;
-  height: 80px;
+  background-color: #08090c5b;
+  border-radius: 19px;
+  width: 450px;
+  height: 65px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -194,8 +218,8 @@
       align-items: center;
       justify-content: center;
       font-family: 'Roboto';
-      font-weight: 400;
-      font-size: 18px;
+      font-weight: 300;
+      font-size: 15px;
       color: white;
       margin: 0;
     }
@@ -277,6 +301,7 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(45deg, #B558B1 ,#7681f8);
+    border-radius: 5px;
   }
 
   .alexis-book-btn-show form {
@@ -293,6 +318,8 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    font-weight: 400;
+    font-size: medium;
   }
 
   // DELETE BTN
@@ -300,6 +327,7 @@
   .alexis-delete-show-btn {
     height: 100%;
     width: 100%;
+    border-radius: 5px;
   }
 
   .alexis-delete-show-btn a {
@@ -308,6 +336,8 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    font-weight: 400;
+    font-size: medium;
   }
 
   .arti-btn {

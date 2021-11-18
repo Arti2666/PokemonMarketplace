@@ -1,5 +1,8 @@
 <div class="container">
   <div class="tanki-card-container">
+    <%= link_to pokemons_path, class: 'back-to-pokemons' do %>
+      <span><i class="fas fa-arrow-alt-circle-left fa-2x"></i>Back to Marketplace</span>
+    <% end %>
     <%= link_to image_tag("pokedex-logo.png"), "https://www.pokemon.com/us/pokedex/#{@pokemon.name}", target: '_blank', class:"alexis-pokedex-link" %>
     <div class="tanki-img-container">
       <div class="pokemon-img">
@@ -61,8 +64,5 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="alexis-marketbtn-show">
-    <%= link_to "Back to marketplace", pokemons_path %>
   </div>
 </div>
