@@ -55,7 +55,7 @@
           <div class="rent-button">
             <% if current_user.id == @pokemon.user_id  %>
               <div class="alexis-delete-show-btn">
-                <%= link_to "Delete", pokemon_path, method: :delete, class:"btn btn-alert"%>
+                <%= link_to "Delete", pokemon_path, method: :delete, class:"btn btn-danger"%>
               </div>
             <% else %>
               <div class="alexis-book-btn-show">
@@ -70,6 +70,6 @@
     </div>
   </div>
   <div class="alexis-marketbtn-show">
-    <%= link_to "back to market place", pokemons_path %>
+    <%= link_to "Back to marketplace", pokemons_path %>
   </div>
 </div>

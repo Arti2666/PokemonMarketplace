@@ -1,13 +1,15 @@
 .arti-alerts {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 100px;
+  right: 0px;
   z-index: 1000;
   color: white;
-  justify-content: center;
+  justify-content: left;
   font-weight: bold;
   animation: fadeOut 5s forwards;
   font-size: 20px;
+  width: 10vw;
+  height: 10vh;
 }
 
 .arti-alerts img {
