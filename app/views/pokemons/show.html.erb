@@ -11,7 +11,7 @@
           <h2><%= @pokemon.name %></h2>
         </div>
         <div class="pokemon-renter">
-          <h4><u>Rented by:</u> <%= "Arti" %></h4> <!-- Add dynamic unsername -->
+          <h4><u>Rented by:</u> <%= @seller.email %></h4>
         </div>
         <div class="pokemon-description">
           <p><%= @pokemon.description %></p>
@@ -23,11 +23,11 @@
             </div>
             <div>
             <div class="arti-tag">
-              <div class="type-tag">
+              <div class="type-tag <%=@pokemon.type1%>">
                 <h4><%= @pokemon.type1 %></h4>
               </div>
               <% if @pokemon.type2.present?  %>
-                <div class="type-tag">
+                <div class="type-tag <%=@pokemon.type2%>">
                   <h4><%= @pokemon.type2 %></h4>
                 </div>
               <% end %>
@@ -39,7 +39,7 @@
               <h4>Weaknesses:</h4>
             </div>
             <div class="weakness-tag">
-              <h4><%= @pokemon.type2 %></h4>
+              <h4><%= "X" %></h4>
             </div>
           </div>
         </div>
