@@ -8,12 +8,25 @@
 }
 
 .tanki-card-container {
+  position: relative;
   display: flex;
   width: 900px;
   height: 500px;
   background-color: #1a1d289c;
   border-radius: 19px;
   // border: 1px solid greenyellow;
+}
+
+// POKEDEX
+.alexis-pokedex-link {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+
+.alexis-pokedex-link img {
+  height: 60px;
+  width: 60px;
 }
 
 //IMAGE CONTAINER

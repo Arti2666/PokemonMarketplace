@@ -1,5 +1,6 @@
 <div class="container">
   <div class="tanki-card-container">
+    <%= link_to image_tag("pokedex-logo.png"), "https://www.pokemon.com/fr/pokedex/#{@pokemon.name}", target: '_blank', class:"alexis-pokedex-link" %>
     <div class="tanki-img-container">
       <div class="pokemon-img">
         <img src="<%= @pokemon.image %>">
@@ -32,14 +33,6 @@
                 </div>
               <% end %>
             </div>
-            </div>
-          </div>
-          <div class="type">
-            <div class="text">
-              <h4>Weaknesses:</h4>
-            </div>
-            <div class="weakness-tag">
-              <h4><%= "X" %></h4>
             </div>
           </div>
         </div>
