@@ -170,8 +170,13 @@ body {
 }
 
 .header-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #f9fafb;
   text-decoration: none;
   font-weight: lighter;
   font-size: medium;
+  height: 100%;
+  width: 100%;
 }
