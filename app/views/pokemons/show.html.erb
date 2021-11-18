@@ -11,7 +11,7 @@
           <h2><%= @pokemon.name %></h2>
         </div>
         <div class="pokemon-renter">
-          <h4><u>Rented by:</u> <%= @seller.email %></h4>
+          <h4><u>Rented by:</u> <%= check_username_empty(@seller)%></h4>
         </div>
         <div class="pokemon-description">
           <p><%= @pokemon.description %></p>

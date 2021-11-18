@@ -1,10 +1,14 @@
 <h1>Profile</h1>
-<h2><%= current_user.email %></h2>
+<div class="header-btn">
+  <%= link_to "GO TO MARKETPLACE", pokemons_path %>
+</div>
+<h2><%= current_user.username.present? ? current_user.username : current_user.email %></h2>
 
 <h2>Mes locations</h2>
 
+
 <% current_user.pokemon_rented.each do |pokemon| %>
-  <%= pokemon.name %> => <%= @users.find(pokemon.user_id).email %>
+  <%= pokemon.name %> => <%= check_pseudo(pokemon, @users) %>
   <br>
 <% end %>
 
