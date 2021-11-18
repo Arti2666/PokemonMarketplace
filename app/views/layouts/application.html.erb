@@ -14,7 +14,15 @@
   <body>
     <%= render "layouts/navbar" %>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="fixed-bottom arti-alerts flex-column">
+      <p class="notice">
+        <% if notice %>
+          <img src="https://c.tenor.com/rbx3ph5SLRUAAAAi/pikachu-pokemon.gif">
+        <% end %>
+        <%= notice %>
+      <p class="alert">
+        <%= alert %>
+      </p>
+    </div>
   </body>
 </html>

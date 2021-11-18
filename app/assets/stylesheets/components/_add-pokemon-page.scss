@@ -1,0 +1,89 @@
+.alexis-addpokemonpage-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.alexis-addpokemonpage-card-form {
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: #21344B;
+}
+
+// LOGO
+
+.alexis-addpokemonpage-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.alexis-addpokemonpage-logo-image img {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+}
+
+.alexis-addpokemonpage-logo h1 {
+ text-align: center;
+ font-size: larger;
+ margin-top: 10px;
+}
+
+// TITLE
+
+.alexis-addpokemonpage-card-form h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-size: x-large;
+}
+
+// INPUTS
+
+.alexis-addpokemonpage-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.alexis-addpokemonpage-inputs .mb-3 {
+  width: 200px;
+}
+
+.alexis-addpokemonpage-card-form label {
+  color: white;
+}
+
+
+// CREATE BTN
+
+.alexis-addpokemonpage-create-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.alexis-addpokemonpage-create-btn input {
+  border: none;
+}
+
+// MARKETPLACE BTN
+
+.alexis-addpokemonpage-marketplace-btn {
+  color: white;
+  margin-top: 20px;
+}
+
+.alexis-addpokemonpage-marketplace-btn:hover {
+  color: white;
+}

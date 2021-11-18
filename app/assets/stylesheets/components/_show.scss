@@ -4,15 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .tanki-card-container {
   display: flex;
   width: 900px;
   height: 500px;
-  background-color: #1a1d28;
+  background-color: #1a1d289c;
   border-radius: 19px;
-  opacity: 76%;
   // border: 1px solid greenyellow;
 }
 
@@ -147,7 +147,6 @@
     justify-content: center;
     border-radius: 5px;
     color: white;
-    background: linear-gradient(45deg, #2a34be ,#0e1dca);
     height: 25px;
     width: 130px;
     margin-left: 15px;
@@ -242,23 +241,170 @@
 
 // RENT BUTTON DIV
 .rent-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 5px;
   color: white;
-  background: linear-gradient(45deg, #B558B1 ,#7681f8);
   height: 42px;
   width: 230px;
 }
 
-  .rent-button p {
-    color: #f9fafb;
+  .rent-button input {
+    height: 100%;
+    width: 100%;
+    color: white;
     font-weight: 300;
     font-size: medium;
     margin: 0;
   }
 
-  .rent-button input {
+  .rent-button input:hover {
     color: white;
+  }
+
+  .alexis-book-btn-show {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #B558B1 ,#7681f8);
+  }
+
+  .alexis-book-btn-show form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .alexis-book-btn-show input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  // DELETE BTN
+
+  .alexis-delete-show-btn {
+    height: 100%;
+    width: 100%;
+  }
+
+  .alexis-delete-show-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .arti-btn {
+    background: rgb(182, 59, 59);
+  }
+
+  .alexis-delete-show-btn a:hover {
+    color: white;
+  }
+
+  // MARKET PLACE BTN
+
+  .alexis-marketbtn-show {
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(to right, #B558B1 0%, #7681f8 100%);
+    height: 42px;
+    width: 230px;
+    margin-top: 50px;
+  }
+
+  .alexis-marketbtn-show a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+  }
+
+  .alexis-marketbtn-show a:hover {
+    color: white;
+  }
+
+
+  // Types
+
+  .Grass {
+    background-color: #9bcc50;
+  }
+
+  .Fire {
+    background-color: #fd7d24;
+  }
+
+  .Water {
+    background-color: #4592c4;
+  }
+
+  .Ground {
+    background: linear-gradient(
+    180deg, #f7de3f 50%, #ab9842 50%);
+  }
+
+   .Flying {
+    background: linear-gradient(
+    180deg, #3dc7ef 50%, #bdb9b8 50%);
+  }
+
+  .Rock {
+    background-color: #a38c21;
+  }
+
+  .Electric {
+    background-color: #EED535;
+  }
+
+  .Ice {
+    background-color: #51C3E7;
+  }
+
+  .Dragon {
+    background: linear-gradient(
+    180deg, #53a4cf 50%, #f16e57 50%);
+  }
+
+  .Bug {
+    background-color: #719F3E;
+  }
+
+  .Psychic {
+    background-color: #F365B9;
+  }
+
+  .Dark {
+    background-color: #707070;
+  }
+
+  .Ghost {
+    background-color: #7B62A3;
+  }
+
+  .Fairy {
+    background-color: #FCB9E8;
+  }
+
+  .Normal {
+    background-color: #A3ABAE;
+  }
+
+  .Steel {
+    background-color: #9DB7B7;
+  }
+
+  .Fighting {
+    background-color: #D56722;
+  }
+
+  .Poison {
+    background-color: #B87EC8;
   }

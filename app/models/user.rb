@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :bookings
 
   has_many :pokemon_rented, through: :bookings, source: :pokemon
+
+  validates :username, presence: true, uniqueness: true, length: { minimum: 3, maximum: 12 }
+
 end
 
 # all your pokemons

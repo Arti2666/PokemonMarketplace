@@ -1,6 +1,35 @@
-.alert {
+.arti-alerts {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 100px;
+  right: 0px;
   z-index: 1000;
+  color: white;
+  justify-content: left;
+  font-weight: bold;
+  animation: fadeOut 5s forwards;
+  font-size: 20px;
+  width: 10vw;
+  height: 10vh;
+}
+
+.arti-alerts img {
+  width: 120px;
+  height: 120px;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+.tenor-gif-embed {
+  width: 80px;
+  height: 80px;
 }
