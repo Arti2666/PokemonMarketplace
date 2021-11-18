@@ -8,4 +8,7 @@ class ProfilesController < ApplicationController
     @bookings = Booking.where(user_id: current_user.id)
     @pokemons = Pokemon.where(user_id: current_user.id)
   end
+
+
+
 end
