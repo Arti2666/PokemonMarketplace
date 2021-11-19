@@ -3,8 +3,10 @@
   <div class="container-main">
     <div class="list-cards">
       <% if @pokemons.empty? %>
-        <h3>No Match</h3>
-        <%= image_tag("charizard_cry.png", height: '500', width: '500') %>
+        <div class="alexis-pokemon-not-found">
+          <h3>Pokemon not found</h3>
+          <%= image_tag("charizard_cry.png", height: '500', width: '500') %>
+        </div>
       <%  else %>
       <% @pokemons.reverse.each do |pokemon| %>
         <% if pokemon.reserved == false %>

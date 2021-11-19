@@ -12,6 +12,7 @@
 // SIGNUP CARD
 
 .sign-up-container {
+  position: relative;
   height: 600px;
   width: 400px;
   border-radius: 20px;
@@ -92,4 +93,17 @@
     margin-left: 5px;
     font-size: small;
   }
+}
+
+// PIKACHU
+
+.alexis-pikaimg-signup {
+  position: absolute;
+  right: -170px;
+  top: -85px;
+}
+
+.alexis-pikaimg-signup img {
+  height: 200px;
+  width: 200px;
 }

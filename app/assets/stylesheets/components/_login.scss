@@ -8,6 +8,7 @@
 }
 
 .login-container {
+  position: relative;
   height: 460px;
   width: 400px;
   border-radius: 20px;
@@ -43,4 +44,17 @@
   display: inline-block;
   color: white;
   margin: 20px;
+}
+
+// PIKACHU
+
+.alexis-pikaimg {
+  position: absolute;
+  right: -170px;
+  top: -85px;
+}
+
+.alexis-pikaimg img {
+  height: 200px;
+  width: 200px;
 }
