@@ -11,7 +11,7 @@
       <% @pokemons.reverse.each do |pokemon| %>
         <% unless pokemon.bookings.any? {|b| b.created_at + (b.amount * 3600) > Time.now} %>
           <div class="card-container">
-            <div class="card">
+            <div class="card <%= "my-pokemon" if current_user.id == pokemon.user_id%>">
                 <%= link_to "", pokemon_path(pokemon), class:"exemple" %>
               <div class="img-container">
                 <div class="card-img">
