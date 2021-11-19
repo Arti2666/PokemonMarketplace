@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     if @booking.save
       @pokemon.reserved = true
       @pokemon.save
-      redirect_to pokemons_path
+      redirect_to my_profile_profiles_path
     else
       render :new
     end
