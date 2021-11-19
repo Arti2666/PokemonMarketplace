@@ -39,31 +39,39 @@
             </div>
           </div>
         </div>
-        <div class="pokemon-price">
-          <div class="current-price">
-            <div class="label">
-              <h4>Current price</h4>
-            </div>
-            <div class="price">
-              <h2 id="price-set" data-price="<%= @pokemon.price%>">€<%= @pokemon.price %> /H</h2>
-              <h2 id="calculate-price"><span id="price-span"></span></h2>
-            </div>
-          </div>
-          <div class="rent-button">
-            <% if current_user.id == @pokemon.user_id  %>
-              <div class="alexis-delete-show-btn">
-                <%= link_to "Delete", pokemon_path, method: :delete, class:"btn btn-danger"%>
+        <div class="pokemon-price d-flex flex-column">
+          <div class="price-and-form d-flex">
+            <div class="current-price">
+              <div class="label">
+                <h4>Current price</h4>
               </div>
-            <% else %>
-              <div class="alexis-book-btn-show">
-                <%= simple_form_for([@pokemon, @booking]) do |f| %>
-                  <%= f.input :amount,label: "Hours", :collection => (1..24) %>
-                  <%= f.button :submit %>
-                  <%# <%= @pokemon.price * params[:amount] if :amount != nil %>
+              <div class="price">
+                <h2 id="price-set" data-price="<%= @pokemon.price%>">€<%= @pokemon.price %>
+                <span class="hours-show">/hours</span>
+                </h2>
               </div>
+            </div>
+            <div class="rent-button">
+              <% if current_user.id == @pokemon.user_id  %>
+                <div class="alexis-delete-show-btn">
+                  <%= link_to "Delete", pokemon_path, method: :delete, class:"btn btn-danger"%>
+                </div>
+              <% else %>
+                <div class="alexis-book-btn-show">
+                  <%= simple_form_for([@pokemon, @booking]) do |f| %>
+                    <div class="">
+                      <%= f.input :amount, label: "Select duration", :collection => (1..24),
+                      input_html: {class: "class-input"},
+                      label_html: {class: "class-label"},
+                      wrapper_html: {class: "class-wrapper"} %>
+                    </div>
+                    <%= f.button :submit %>
+                </div>
+                <% end %>
               <% end %>
-            <% end %>
+            </div>
           </div>
+          <h2 id="calculate-price"><span id="price-span"></span></h2>
         </div>
       </div>
     </div>
