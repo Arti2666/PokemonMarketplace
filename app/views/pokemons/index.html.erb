@@ -7,7 +7,7 @@
         <%= image_tag("charizard_cry.png", height: '500', width: '500') %>
       <%  else %>
       <% @pokemons.reverse.each do |pokemon| %>
-        <% if pokemon.reserved == false %>
+        <% unless pokemon.bookings.any? {|b| b.created_at + (b.amount * 3600) > Time.now} %>
           <div class="card-container">
             <div class="card">
                 <%= link_to "", pokemon_path(pokemon), class:"exemple" %>
