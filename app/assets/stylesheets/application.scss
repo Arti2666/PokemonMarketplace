@@ -11,3 +11,19 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// ALERT
+
+.fixed-bottom {
+  position: fixed;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed-bottom img {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  width: 60px;
+}
