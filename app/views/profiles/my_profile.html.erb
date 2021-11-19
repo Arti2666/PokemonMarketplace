@@ -65,7 +65,7 @@
                   <%= link_to pokemon_path(pokemon) do %>
                     <div class="card">
                       <div class="img-container">
-                        <div class="card-img">
+                        <div class="card-img    <%= pokemon.reserved == true ? "pokemon-rented" : "pokemon-available" %>">
                           <img src="<%= pokemon.image %>" alt="">
                         </div>
                       </div>
