@@ -2,7 +2,7 @@
   <div class="left-element">
       <div class="logo">
         <%= link_to image_tag("pokeball.png"), root_path %>
-        <h1>Pokéshop</h1>
+        <h1><%= link_to "Pokéshop", root_path, class:"alexis-logo-title" %></h1>
       </div>
       <div class="element">
         <p class="sign-up-btn"><%= link_to 'Marketplace', pokemons_path, class:"Arti-btn-Mkt"%></p>
@@ -22,7 +22,7 @@
     </div>
     <% if user_signed_in? %>
       <div class="sign-up-btn">
-        <%= link_to "Sign Out", destroy_user_session_path,  method: :delete%>
+        <%= link_to "Log Out", destroy_user_session_path,  method: :delete%>
       </div>
         <div class="sign-up-btn">
           <%= link_to "My Profile", my_profile_profiles_path %>
