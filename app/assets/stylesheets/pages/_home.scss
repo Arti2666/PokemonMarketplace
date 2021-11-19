@@ -87,11 +87,12 @@ body {
 .element-search input {
   color: white;
   font-size: medium;
-  padding-left: 45px;
+  padding-left: 15px;
 }
 
-.element-search i {
-  position: absolute;
+.element-search img {
+  height: 20px;
+  width: 20px;
   left: 10px;
   bottom: 7px;
 }

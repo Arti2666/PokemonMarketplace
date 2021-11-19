@@ -165,3 +165,21 @@
   transform: scale(1.12);
   box-shadow: 0px 0px 39px 7px rgba(74px, 228px, 117px, 0.8);
 }
+
+// POKEMON NOT FOUND
+
+.alexis-pokemon-not-found {
+  display: flex;
+  flex-direction: column;
+}
+
+.alexis-pokemon-not-found h3 {
+  text-align: center;
+  color: white;
+}
+
+.alexis-pokemon-not-found img {
+  height: 350px;
+  width: 350px;
+  display: flex;
+}
