@@ -3,6 +3,7 @@ const givePrice = () => {
   const hours = document.querySelector("#booking_amount")
   const price = document.querySelector("#price-set").dataset.price
   const priceSpan = document.querySelector("#price-span")
+  const percentSpan = document.querySelector("#percent-span")
 
   if (hours) {
     hours.addEventListener('change', () => {
@@ -10,13 +11,16 @@ const givePrice = () => {
 
       if (hours.value <= 10) {
         const calcul = hours.value * price;
-        return priceSpan.innerText = `Total: ${calcul} €`;
+        priceSpan.innerText = `Total: ${calcul} €`;
+        percentSpan.innerText = ``;
       } else if ((hours.value > 10) && (hours.value <= 15)) {
         const calcul = (hours.value * price) * 0.9;
-        return priceSpan.innerText = `Total: ${Math.ceil(calcul)} € / -10%`;
+        priceSpan.innerText = `Total: ${Math.ceil(calcul)} € / `;
+        percentSpan.innerText = `-10%`;
       } else {
         const calcul = (hours.value * price) * 0.8;
-        return priceSpan.innerText = `Total: ${Math.ceil(calcul)} € / -20%`;
+        priceSpan.innerText = `Total: ${Math.ceil(calcul)} € / `;
+        percentSpan.innerText = `-20%`;
       }
 
     }
