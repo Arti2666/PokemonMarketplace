@@ -7,6 +7,7 @@
 }
 
 .alexis-addpokemonpage-card-form {
+  position: relative;
   height: 500px;
   width: 400px;
   border-radius: 20px;
@@ -86,4 +87,17 @@
 
 .alexis-addpokemonpage-marketplace-btn:hover {
   color: white;
+}
+
+// PIKACHU
+
+.alexis-pikaimg-addpokemon {
+  position: absolute;
+  right: -161px;
+  top: -62px;
+}
+
+.alexis-pikaimg-addpokemon img {
+  height: 200px;
+  width: 200px;
 }
