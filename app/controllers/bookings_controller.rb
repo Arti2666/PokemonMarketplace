@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @pokemon = Pokemon.find(params[:pokemon_id])
     @booking.pokemon = @pokemon
+    @booking.amount = params["booking"]["amount"].to_i
     @booking.price = @pokemon.price
     authorize @booking
     if @booking.save
