@@ -134,12 +134,14 @@
   position: fixed;
   bottom: 10px;
   right: 10px;
+  margin-right: 20px;
 }
 
 .add-poke p {
   color: white;
   text-align: center;
   font-weight: bold;
+  font-size: small;
 }
 
 .add-poke a {
@@ -155,9 +157,11 @@
   border-radius: 50%;
   margin: 20px;
   margin-top: 0;
-  transition: 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .add-poke a:hover {
-background-color: #24d857;
+  background-color: #24d857;
+  transform: scale(1.12);
+  box-shadow: 0px 0px 39px 7px rgba(74px, 228px, 117px, 0.8);
 }

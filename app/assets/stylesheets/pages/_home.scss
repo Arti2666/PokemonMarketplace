@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 body {
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(111.34deg, #21344B 0%, #648395 100%);
   background-attachment: fixed;
   font-family: 'Roboto';
@@ -17,6 +17,7 @@ body {
   color: white;
   z-index: 1;
   background: linear-gradient(#21344B ,transparent);
+  backdrop-filter: blur(0.9px);
 }
 
 // NAVBAR LOGO
@@ -26,11 +27,17 @@ body {
   justify-content: center;
 }
 
-.logo h1 {
+.logo h1 a {
   font-size: 24px;
   font-weight: 400;
+  color: white;
+  text-decoration: none;
   margin: 0;
   margin-right: 15px;
+}
+
+.logo h1 a:hover {
+  color: white;
 }
 
 .left-element {
@@ -55,6 +62,19 @@ body {
 .element {
   margin: 20px;
 }
+
+.Arti-btn-Mkt {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  transition: 0.2s ease-in-out;
+}
+
+.Arti-btn-Mkt:hover {
+  color: #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+
 
 // NAVBAR - BARRE DE RECHERCHE
 .element-search {
@@ -109,8 +129,11 @@ body {
 .right-element .sign-up-btn a {
   background-color: transparent;
   color: white;
-  text-decoration: underline;
   background-color: transparent;
+}
+
+.right-element .sign-up-btn a:hover {
+
 }
 
 
